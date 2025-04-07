@@ -1,1 +1,61 @@
 @charset "UTF-8";
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(266, 37%, 13%);
+}
+
+#display{
+    background-color: rgb(62, 62, 62);
+    width: 95%;
+    height: 22vh;
+    padding: 10px;
+    font-size: 2em;
+    text-align: left;
+    border-radius: 5px;
+    color: white;
+}
+
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    padding: 0px;
+}
+
+#time{
+    width: 108px;
+    height: 30px;
+    background-color: rgb(190, 127, 250);
+    color: white;
+    border-radius: 7px;
+}
+
+button{
+    border: none;
+    width: 85px;
+    height: 36px;
+    border-radius: 4px;
+    margin: 0;
+    background-color: rgb(23, 22, 29);
+    color: white;
+}
+
+#math-keys{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2px;
+    padding: 2px;
+}
+
+#especial-one{
+    background-color: rgb(146, 146, 146);
+}
+
+#display-btns{
+    background-color: orange;
+}
