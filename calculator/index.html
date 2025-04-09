@@ -10,12 +10,11 @@
     <div id="calculator">
         <textarea name="text" id="display" readonly></textarea>
         <div id="keys">
-            <button id="time" onclick="appendToDisplay()" class="operator-btn">in days</button> <!--Calma necessito pensar ainda, nothing ready yet-->
-            <button id="time" onclick="appendToDisplay()" class="operator-btn">in hours</button> <!--Calma necessito pensar ainda, nothing ready yet-->
             <button id="time" onclick="appendToDisplay()" class="operator-btn">in mins</button> <!--Calma necessito pensar ainda, nothing ready yet-->
             <button id="time" onclick="appendToDisplay()" class="operator-btn">in secs</button> <!--Calma necessito pensar ainda, nothing ready yet-->
             
         </div>
+
         <div id="math-keys">
             <button id="especial-one" onclick="appendToDisplay('+')" class="math-btn">+</button>
             <button onclick="appendToDisplay('1')">1</button>
@@ -33,9 +32,9 @@
             <button onclick="appendToDisplay('9')">9</button>
             <button id="especial-one" onclick="appendToDisplay('')" class="time-btn">m</button> <!--Calma necessito pensar ainda-->
             <button id="especial-one" onclick="appendToDisplay('/')" class="math-btn">/</button>
-            <button id="especial-one" onclick="appendToDisplay('()')" class="math-btn">(</button><!--vou pensar nessa tb-->
+            <button id="especial-one" onclick="appendToDisplay('(')" class="math-btn">(</button>
             <button onclick="appendToDisplay('0')">0</button>
-            <button id="especial-one" onclick="appendToDisplay('()')" class="math-btn">)</button><!--vou pensar nessa tb-->
+            <button id="especial-one" onclick="appendToDisplay(')')" class="math-btn">)</button>
             <button id="especial-one" onclick="appendToDisplay('')" class="time-btn">s</button> <!--Calma necessito pensar ainda-->
         </div>
         <div>
@@ -43,5 +42,7 @@
             <button id="display-btns" onclick="clearDisplay()" class="operator-btn">C</button>
         </div>
     </div>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
