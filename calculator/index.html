@@ -10,9 +10,10 @@
     <div id="calculator">
         <textarea name="text" id="display" readonly></textarea>
         <div id="keys">
-            <button id="time" onclick="appendToDisplay()" class="operator-btn">in mins</button> <!--Calma necessito pensar ainda, nothing ready yet-->
-            <button id="time" onclick="appendToDisplay()" class="operator-btn">in secs</button> <!--Calma necessito pensar ainda, nothing ready yet-->
-            
+            <button id="time" onclick="convertTime('days')" class="operator-btn">in days</button> <!--Calma necessito pensar ainda, nothing ready yet-->
+            <button id="time" onclick="convertTime('hours')" class="operator-btn">in hours</button> <!--Calma necessito pensar ainda, nothing ready yet-->
+            <button id="time" onclick="convertTime('minutes')" class="operator-btn">in mins</button> <!--Calma necessito pensar ainda, nothing ready yet-->
+            <button id="time" onclick="convertTime('seconds')" class="operator-btn">in secs</button> <!--Calma necessito pensar ainda, nothing ready yet-->
         </div>
 
         <div id="math-keys">
