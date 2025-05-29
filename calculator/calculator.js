@@ -1,69 +1,9 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const display = document.getElementById("display");
 let tempo = 'days'
 
 function appendToDisplay(input){
-    display.value += input
+    display.value += input;
 }
 
 function addChar(unit) {
@@ -71,27 +11,27 @@ function addChar(unit) {
     const match = value.match(/(\d+)(?![dhms])$/)
 
     if (match) {
-        display.value = value.slice(0, -match[0].length) + match[0] + unit
+        display.value = value.slice(0, -match[0].length) + match[0] + unit;
     }
 }
 
 function clearDisplay() {
-    display.value = ''
+    display.value = '';
 }
 
 function convertTime(unit) {
-    tempo = unit
+    tempo = unit;
 }
 
 function calculate() {
     const input = display.value
-    const regex = /(\d+)([dhms])/g
+    const regex = /(\d+)([dhms])/g;
     let match;
-    let totalSeconds = 0
+    let totalSeconds = 0;
 
     while ((match = regex.exec(input)) !== null) {
-        const value = +match[1]
-        const unit = match[2]
+        const value = +match[1];
+        const unit = match[2];
 
         switch (unit) {
             case 'd':
@@ -113,23 +53,22 @@ function calculate() {
     switch (targetUnit) {
         case 'days':
             result = totalSeconds / 86400;
-            display.value = `${result} dia(s)`
+            display.value = `${result} dia(s)`;
             break;
         case 'hours':
             result = totalSeconds / 3600;
-            display.value = `${result} hora(s)`
+            display.value = `${result} hora(s)`;
             break;
         case 'minutes':
             result = totalSeconds / 60;
-            display.value = `${result} minuto(s)`
+            display.value = `${result} minuto(s)`;
             break;
         case 'seconds':
             result = totalSeconds;
-            display.value = `${result} segundo(s)`
+            display.value = `${result} segundo(s)`;
             break
         default:
-            alert("Unidade desconhecida.")
+            alert("Unidade desconhecida.");
     }
 }
-*/
 
