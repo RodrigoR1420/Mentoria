@@ -1,6 +1,5 @@
-
 const display = document.getElementById("display");
-let tempo = 'days'
+let targetUnit = 'days'; 
 
 function appendToDisplay(input){
     display.value += input;
@@ -8,7 +7,7 @@ function appendToDisplay(input){
 
 function addChar(unit) {
     let value = display.value;
-    const match = value.match(/(\d+)(?![dhms])$/)
+    const match = value.match(/(\d+)(?![dhms])$/);
 
     if (match) {
         display.value = value.slice(0, -match[0].length) + match[0] + unit;
@@ -20,17 +19,17 @@ function clearDisplay() {
 }
 
 function convertTime(unit) {
-    tempo = unit;
+    targetUnit = unit;
 }
 
 function calculate() {
-    const input = display.value
+    const input = display.value;
     const regex = /(\d+)([dhms])/g;
     let match;
     let totalSeconds = 0;
 
     while ((match = regex.exec(input)) !== null) {
-        const value = +match[1];
+        const value = parseFloat(match[1]);
         const unit = match[2];
 
         switch (unit) {
@@ -49,7 +48,7 @@ function calculate() {
         }
     }
 
-    let result
+    let result;
     switch (targetUnit) {
         case 'days':
             result = totalSeconds / 86400;
@@ -66,9 +65,8 @@ function calculate() {
         case 'seconds':
             result = totalSeconds;
             display.value = `${result} segundo(s)`;
-            break
+            break;
         default:
             alert("Unidade desconhecida.");
     }
 }
-
